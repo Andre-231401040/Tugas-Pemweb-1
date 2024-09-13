@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto Slab", system-ui;
+}
+
+#navigation-bar {
+  gap: 4rem;
+  width: 100vw;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+#navigation-bar a {
+  color: black;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+#navigation-bar a:hover {
+  scale: 1.1;
+}
+
+main {
+  position: relative;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#start {
+  animation: slideDown 1.8s forwards;
+}
+
+#start div {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#start div img {
+  width: 2.5rem;
+}
+
+#about-me {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#about-me h1 {
+  font-size: 4rem;
+}
+
+#about-me h3 {
+  font-size: 1.8rem;
+}
+
+#about-me img {
+  width: 15rem;
+  border-radius: 50%;
+}
+
+#about-me .nama,
+#about-me .kom {
+  animation: slideRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#about-me .nim,
+#about-me img {
+  animation: slideLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#about-me-detail {
+  gap: 4rem;
+}
+
+#about-me-detail div {
+  width: 50vw;
+  text-align: center;
+}
+
+#about-me-detail .hobi,
+#about-me-detail .deskripsi-diri {
+  animation: slideRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#about-me-detail .motto {
+  animation: slideLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#jadwal-kuliah {
+  gap: 1rem;
+  animation: enlarge linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#jadwal-kuliah table {
+  text-align: center;
+  border-spacing: 0;
+  font-size: 0.8rem;
+  border: 1px solid black;
+}
+
+#jadwal-kuliah th,
+#jadwal-kuliah td {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+#kontak {
+  gap: 1.8rem;
+  animation: enlarge linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#kontak .social-media {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#kontak .social-media a {
+  transition: 0.2s;
+}
+
+#kontak .social-media a img {
+  width: 4rem;
+}
+
+#kontak .social-media a:hover {
+  opacity: 0.5;
+}
+
+footer {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+/* Animasi */
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enlarge {
+  from {
+    scale: 0.5;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (min-width: 320px) and (max-width: 767px) {
+  header {
+    font-size: 0.75rem;
+  }
+
+  #jadwal-kuliah table {
+    font-size: 0.38rem;
+  }
+
+  #jadwal-kuliah th,
+  #jadwal-kuliah td {
+    padding: 0.2rem;
+  }
+}
