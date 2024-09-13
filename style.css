@@ -229,6 +229,10 @@ footer {
     font-size: 0.75rem;
   }
 
+  #navigation-bar{
+    gap: 2rem;  
+  }
+  
   #jadwal-kuliah table {
     font-size: 0.38rem;
   }
